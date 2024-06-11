@@ -88,7 +88,7 @@ function App() {
           Total Skill Count: <span>{skillCount}</span>
         </h2>
         <div className='skill-container'>
-          <img src='/images/skillbg.webp' className='skill-bg'/>
+          <img src='./images/skillbg.webp' className='skill-bg'/>
           <div className='skillgrid'>
             {skillList.map((x, id) => (          
               <Skill key={id + '' + x.name} skillCounter={() => addCount(id)} skill={x} id={id}></Skill>))
@@ -102,7 +102,7 @@ function App() {
 
 function Skill({skillCounter, skill, id}) {
   let skillName = skill.name
-  let imgSrc = `/images/${skillName}.webp`
+  let imgSrc = `./images/${skillName}.webp`
   let itemId= id + '' + skillName;
 
   const skillForm = () => {
