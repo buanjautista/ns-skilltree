@@ -3,48 +3,16 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-size:12px;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 
 .skillgrid {
+  position:absolute;
+  top:0;
+  left: 0;
+  z-index: 2;
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
   grid-template-columns:1fr;
   grid-template-areas: 
   "za za aa ab zb zb zb ac ad zc"
@@ -55,10 +23,22 @@
   "zr fa zs fb zt fc zu zu fd zv"
   "ga zw gb zx gc zy gd zz zz zz";
 }
-
+.skill-bg{
+  position:absolute;
+  top:0;
+  left: 0;
+}
+.skill-container{
+  position:relative;
+}
 .skillbutton {
-  height:100px;
-  width: 100px;
+  height:60px;
+  width: 60px;
+  padding-left: 0.8rem;
+}
+.skillbutton>img {
+  height:40px;
+  width:40px;
 }
 
 .skillbutton.active {
@@ -68,48 +48,63 @@
   background-color: slategrey;
 }
 
-
-.skillbutton:nth-child(1) { grid-area:aa; border-radius:50%;}
-.skillbutton:nth-child(2) { grid-area:ab;
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+.hiddendesc {
+  display:none;
 }
-.skillbutton:nth-child(3) { grid-area:ac; border-radius:50%;}
-.skillbutton:nth-child(4) { grid-area:ad; border-radius:50%;}
+.skillbutton:hover+.hiddendesc{
+  display: block;
+  position: fixed;
+  bottom: 0;
+}
 
-.skillbutton:nth-child(5) { grid-area:ba; border-radius:50%;}
-.skillbutton:nth-child(6) { grid-area:bb; border-radius:50%;}
-.skillbutton:nth-child(7) { grid-area:bc; border-radius:50%;}
-.skillbutton:nth-child(8) { grid-area:bd; border-radius:50%;}
-.skillbutton:nth-child(9) { grid-area:be; border-radius:50%;}
-.skillbutton:nth-child(10) { grid-area:bf; border-radius:50%;}
-.skillbutton:nth-child(11) { grid-area:bg; border-radius:50%;}
+.skillbutton:nth-child(1) { grid-area:aa; }
+.skillbutton:nth-child(2) { grid-area:ab; }
+.skillbutton:nth-child(3) { grid-area:ac; }
+.skillbutton:nth-child(4) { grid-area:ad; }
 
-.skillbutton:nth-child(12) { grid-area:ca; border-radius:50%;}
-.skillbutton:nth-child(13) { grid-area:cb; border-radius:50%;}
-.skillbutton:nth-child(14) { grid-area:cc; border-radius:50%;}
-.skillbutton:nth-child(15) { grid-area:cd; border-radius:50%;}
-.skillbutton:nth-child(16) { grid-area:ce; border-radius:50%;}
-.skillbutton:nth-child(17) { grid-area:cf; border-radius:50%;}
-.skillbutton:nth-child(18) { grid-area:cg; border-radius:50%;}
-.skillbutton:nth-child(19) { grid-area:ch; border-radius:50%;}
+.skillbutton:nth-child(5) { grid-area:ba; }
+.skillbutton:nth-child(6) { grid-area:bb; }
+.skillbutton:nth-child(7) { grid-area:bc; }
+.skillbutton:nth-child(8) { grid-area:bd; }
+.skillbutton:nth-child(9) { grid-area:be; }
+.skillbutton:nth-child(10) { grid-area:bf; }
+.skillbutton:nth-child(11) { grid-area:bg; }
 
-.skillbutton:nth-child(20) { grid-area:da; border-radius:50%;}
-.skillbutton:nth-child(21) { grid-area:db; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);}
-.skillbutton:nth-child(22) { grid-area:dc; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);}
+.skillbutton:nth-child(12) { grid-area:ca; }
+.skillbutton:nth-child(13) { grid-area:cb; }
+.skillbutton:nth-child(14) { grid-area:cc; }
+.skillbutton:nth-child(15) { grid-area:cd; }
+.skillbutton:nth-child(16) { grid-area:ce; }
+.skillbutton:nth-child(17) { grid-area:cf; }
+.skillbutton:nth-child(18) { grid-area:cg; }
+.skillbutton:nth-child(19) { grid-area:ch; }
 
-.skillbutton:nth-child(23) { grid-area:dd; border-radius:50%;}
-.skillbutton:nth-child(24) { grid-area:de; border-radius:50%;}
-.skillbutton:nth-child(25) { grid-area:ea; border-radius:50%;}
-.skillbutton:nth-child(26) { grid-area:eb; border-radius:50%;}
-.skillbutton:nth-child(27) { grid-area:ec; border-radius:50%;}
-.skillbutton:nth-child(28) { grid-area:ed; border-radius:50%;}
+.skillbutton:nth-child(20) { grid-area:da; }
+.skillbutton:nth-child(21) { grid-area:db; }
+.skillbutton:nth-child(22) { grid-area:dc; }
 
-.skillbutton:nth-child(29) { grid-area:fa; border-radius:50%;}
-.skillbutton:nth-child(30) { grid-area:fb; border-radius:50%;}
-.skillbutton:nth-child(31) { grid-area:fc; border-radius:50%;}
-.skillbutton:nth-child(32) { grid-area:fd; border-radius:50%;}
+.skillbutton:nth-child(23) { grid-area:dd; }
+.skillbutton:nth-child(24) { grid-area:de; }
+.skillbutton:nth-child(25) { grid-area:ea; }
+.skillbutton:nth-child(26) { grid-area:eb; }
+.skillbutton:nth-child(27) { grid-area:ec; }
+.skillbutton:nth-child(28) { grid-area:ed; }
 
-.skillbutton:nth-child(33) { grid-area:ga; border-radius:50%;}
-.skillbutton:nth-child(34) { grid-area:gb; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);}
-.skillbutton:nth-child(35) { grid-area:gc; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);}
-.skillbutton:nth-child(36) { grid-area:gd; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);}
+.skillbutton:nth-child(29) { grid-area:fa; }
+.skillbutton:nth-child(30) { grid-area:fb; }
+.skillbutton:nth-child(31) { grid-area:fc; }
+.skillbutton:nth-child(32) { grid-area:fd; }
+
+.skillbutton:nth-child(33) { grid-area:ga; }
+.skillbutton:nth-child(34) { grid-area:gb; }
+.skillbutton:nth-child(35) { grid-area:gc; }
+.skillbutton:nth-child(36) { grid-area:gd; }
+
+.circle {
+  border-radius:50%;
+}
+.rhombus {
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
+  height:70px;
+  width: 70px;
+}

@@ -19,7 +19,7 @@ const skillList = [{name: "Immortal Dash", cost: 0, img: '', description: ""},
   {name: "Swift Rise", cost: 1, img: '', description: ""},
   {name: "Life Recovery", cost: 1, img: '', description: ""},
   {name: "Charged Strike", cost: 0, img: '', description: ""},
-  {name: "Qi Boost", cost: 2, img: '', description: ""},
+  {name: "Qi Boost", cost: 1, img: '', description: ""},
   {name: "Backlash", cost: 2, img: '', description: ""},
   {name: "Skull Kick", cost: 2, img: '', description: ""},
   {name: "Breathing Exercise", cost: 2, img: '', description: ""},
@@ -87,25 +87,38 @@ function App() {
         <h2>
           Total Skill Count: <span>{skillCount}</span>
         </h2>
-        <div className='skillgrid'>
-          {skillList.map((x, id) => (          
-            <Skill key={id + '' + x.name} skillCounter={() => addCount(id)} imgSrc={'test'} skillName={x.name} id={id + '' + x.name}></Skill>))
-          }
+        <div className='skill-container'>
+          <img src='/public/images/skillbg.webp' className='skill-bg'/>
+          <div className='skillgrid'>
+            {skillList.map((x, id) => (          
+              <Skill key={id + '' + x.name} skillCounter={() => addCount(id)} skill={x} id={id}></Skill>))
+            }
+          </div>
         </div>
       </div>
     </>
   )
 }
 
-function Skill({skillCounter, imgSrc, skillName, id}) {
+function Skill({skillCounter, skill, id}) {
+  let skillName = skill.name
+  let imgSrc = `/public/images/${skillName}.webp`
+  let itemId= id + '' + skillName;
+
+  const skillForm = () => {
+    let list = [1,20,21,33,34,35]
+    if (list.includes(id)) {
+      return 'rhombus';
+    }
+    return 'circle';
+  }
 
   return (
     <>
-      <button className='skillbutton' onClick={skillCounter} id={id}>
-        <p>{skillName}</p>
+      <button className={`skillbutton ${skillForm()}`} onClick={skillCounter} id={itemId}>
+          <img src={imgSrc} alt={skillName}/>
       </button>
-      {/* <img src={imgSrc}>Test</img> */}
-
+        {/* <div className="hiddendesc">{skillName}</div> */}
     </>
   )
 }
