@@ -2,6 +2,7 @@
   "name": "ns-skilltree",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://buanjautista.github.io/ns-skilltree/",
   "type": "module",
   "scripts": {
     "dev": "vite",
