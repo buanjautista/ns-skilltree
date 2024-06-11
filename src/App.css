@@ -30,6 +30,8 @@
 }
 .skill-container{
   position:relative;
+  max-width:722px;
+  margin: 0 auto;
 }
 .skillbutton {
   height:60px;
