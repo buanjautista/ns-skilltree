@@ -102,7 +102,8 @@ function App() {
 
 function Skill({skillCounter, skill, id}) {
   let skillName = skill.name
-  let imgSrc = `./images/${skillName}.webp`
+
+  let imgSrc = `./images/${skillName.toLowerCase()}.webp`
   let itemId= id + '' + skillName;
 
   const skillForm = () => {
