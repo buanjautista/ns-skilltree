@@ -104,11 +104,13 @@
 
 .circle {
   border-radius:50%;
+  padding-left: 10px;
 }
 .rhombus {
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
   height:70px;
   width: 70px;
+  padding-left: 15px;
 }
 
 .flex {
