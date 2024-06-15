@@ -110,3 +110,18 @@
   height:70px;
   width: 70px;
 }
+
+.flex {
+  display:flex;
+}
+
+.currentSkillBox {
+  position:fixed;
+  right:0;
+  text-align: start;
+  width:200px;
+  height:50%;
+  background-color: black;
+  padding:10px;
+  border-radius:5px;
+}
