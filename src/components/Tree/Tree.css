@@ -36,7 +36,7 @@
 .skillbutton {
   height: 60px;
   width: 60px;
-  padding-left: 0.8rem;
+  /* padding-left: 0.8rem; */
 }
 .skillbutton > img {
   height: 40px;
@@ -189,6 +189,10 @@
   display: flex;
 }
 
+.justify-between{
+  justify-content: space-between;
+}
+
 .currentSkillBox {
   position: fixed;
   right: 0;
@@ -198,4 +202,13 @@
   background-color: black;
   padding: 10px;
   border-radius: 5px;
+}
+h4{
+  font-weight: 300;
+}
+h3{
+  font-weight: 500;
+}
+h2 {
+  font-weight: 700;
 }

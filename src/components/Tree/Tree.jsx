@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import "./Tree.css";
 import { skillList } from "./skilllist.js";
+import { Skill } from '../Card/Card.jsx'
+import "./Tree.css";
 
 export default function Tree() {
   const [buttons, setButtons] = useState(Array(skillList.length).fill(false));
@@ -71,45 +72,17 @@ export default function Tree() {
           </div>
         </div>
         <div className="currentSkillBox">
-          <div>
+          <div className="flex justify-between">
             <h3 id="currentNameBox"></h3>
+            <div>
+              Cost: <span id="currentCostBox"></span>
+            </div>
           </div>
           <div>
             <h4 id="currentDescBox"></h4>
           </div>
-          <div>
-            Cost: <span id="currentCostBox"></span>
-          </div>
         </div>
       </div>
-    </>
-  );
-}
-
-function Skill({ skillCounter, skill, id, hover }) {
-  let skillName = skill.name;
-
-  let imgSrc = `./images/${skillName.toLowerCase()}.webp`;
-  let itemId = id + "" + skillName;
-
-  const skillForm = () => {
-    let list = [1, 20, 21, 33, 34, 35];
-    if (list.includes(id)) {
-      return "rhombus";
-    }
-    return "circle";
-  };
-
-  return (
-    <>
-      <button
-        className={`skillbutton ${skillForm()}`}
-        onClick={skillCounter}
-        id={itemId}
-        onMouseOver={() => hover(skill)}
-      >
-        <img src={imgSrc} alt={skillName} />
-      </button>
     </>
   );
 }
