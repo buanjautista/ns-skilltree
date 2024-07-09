@@ -68,7 +68,7 @@ export const skillList = [
     cost: 0,
     img: "",
     description:
-      "Press [Parry] in midair to bounce off New Kunlun's green energy orbs to gain access to higher areas or explore new paths. If a green glow is present on an enemy using a Crimson Attack, Yi can use Tai-Chi Kick to inflict Internal Damage to them.",
+      "Press [Parry] in midair to bounce off New Kunlun's green energy orbs to gain access to higher areas or explore new paths. If a green glow is present on an enemy using a Crimson Attack, Yi can use Tai-Chi Kick to inflict Internal Damage to them. // 60 Base Damage //",
   },
   {
     name: "Bullet Deflect",
@@ -83,7 +83,7 @@ export const skillList = [
     cost: 0,
     img: "",
     description:
-      "Hold [Parry] to charge and release [Parry] at the right moment to deflect any attack (including Crimson Attacks) and inflict Internal Damage.",
+      "Hold [Parry] to charge and release [Parry] at the right moment to deflect any attack (including Crimson Attacks) and inflict Internal Damage. // 60 Internal Damage //",
   },
   {
     name: "Swift Rise",
@@ -118,14 +118,14 @@ export const skillList = [
     cost: 2,
     img: "",
     description:
-      "Increases the Internal Damage inflicted by a successful Tai-Chi Kick or Skull Kick",
+      "Increases the Internal Damage inflicted by a successful Tai-Chi Kick or Skull Kick. // +100 Internal Damage to Tai-Chi Kick and Skull Kick //",
   },
   {
     name: "Skull Kick",
     cost: 2,
     img: "",
     description:
-      "White in the air, hold down [Down] and [Attack] to perform a special kick which will bounce you up in the air for a bit if successfully landed. Skull Kick can be used as an alternative to the Tai-Chi Kick.",
+      "White in the air, hold down [Down] and [Attack] to perform a special kick which will bounce you up in the air for a bit if successfully landed. Skull Kick can be used as an alternative to the Tai-Chi Kick. // Does 60 Internal Damage and a single slash hit //",
   },
   {
     name: "Breathing Exercise",
@@ -139,7 +139,7 @@ export const skillList = [
     name: "Leverage",
     cost: 2,
     img: "",
-    description: "Increases Internal Damage inflicted by Unbounded Counter.",
+    description: "Increases Internal Damage inflicted by Unbounded Counter. // Adds 75 internal damage to Unbound Counter //",
   },
   {
     name: "Water Flow",
@@ -222,7 +222,7 @@ export const skillList = [
     cost: 2,
     img: "",
     description:
-      "Increases damage inflicted by all slash attacks, including the Triple Slash and the Charged Strike.",
+      "Increases damage inflicted by all slash attacks, including the Triple Slash and the Charged Strike. // + 4.6 base slash dmg // ",
   },
 
   {

@@ -1,8 +1,9 @@
-export function Skill({ skillCounter, skill, id, hover }) {
+export function Skill({ skillCounter, skill, id, hover, selectionNumber }) {
   let skillName = skill.name;
 
   let imgSrc = `./images/${skillName.toLowerCase()}.webp`;
   let itemId = id + "" + skillName;
+  let selection = selectionNumber.findIndex((item) => item == id) + 1;
 
   const skillForm = () => {
     let list = [1, 20, 21, 33, 34, 35];
@@ -11,7 +12,7 @@ export function Skill({ skillCounter, skill, id, hover }) {
     }
     return "circle";
   };
-
+  
   return (
     <>
       <button
@@ -21,6 +22,7 @@ export function Skill({ skillCounter, skill, id, hover }) {
         onMouseOver={() => hover(skill)}
       >
         <img src={imgSrc} alt={skillName} />
+        <div className={`selection-number`}>{(selection > 0) && selection}</div>
       </button>
     </>
   );
