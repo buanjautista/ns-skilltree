@@ -44,6 +44,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   position:relative;
+  color: white;
 }
 button:hover {
   border-color: #646cff;
@@ -65,17 +66,4 @@ button:focus-visible {
 
 .dmg-calc {
   width: 100px;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
