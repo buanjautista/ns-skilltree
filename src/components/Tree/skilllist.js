@@ -87,14 +87,14 @@ export const skillList = [
   },
   {
     name: "Swift Rise",
-    cost: 1,
+    cost: 2,
     img: "",
     description:
       "When knocked down, press [Dash] to quickly dash and get Yi back up on his feet. Speeds up recovery and allows Yi to swiftly engage with an enemy's follow-up attack.",
   },
   {
     name: "Life Recovery",
-    cost: 1,
+    cost: 2,
     img: "",
     description:
       "Recover some health after pickup up experience dropped after death.",
